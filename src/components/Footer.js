@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Container from './shared-components/Container';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
+import Container from './shared-components/Container'
 
 const styles = theme => ({
   root: {
@@ -22,10 +22,10 @@ const styles = theme => ({
     fill: '#3b5998',
     width: '40px',
   },
-});
+})
 
 const Footer = props => {
-  const { classes } = props;
+  const { classes } = props
 
   return (
     <section className={classes.root}>
@@ -51,11 +51,11 @@ const Footer = props => {
         </Typography>
       </Container>
     </section>
-  );
-};
+  )
+}
 
 Footer.propTypes = {
   classes: PropTypes.object.isRequired,
-};
+}
 
-export default withStyles(styles)(Footer);
+export default withStyles(styles)(Footer)

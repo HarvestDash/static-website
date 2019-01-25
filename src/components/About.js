@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Container from './shared-components/Container';
-import Section from './shared-components/Section';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
+import Container from './shared-components/Container'
+import Section from './shared-components/Section'
 
 import missionSrc from "../images/mission.svg"
 import visionSrc from "../images/vision.svg"
@@ -43,10 +43,10 @@ const styles = theme => ({
       width: '100%',
     },
   },
-});
+})
 
 const About = props => {
-  const { classes } = props;
+  const { classes } = props
   return (
     <Section id="about" className={classes.root}>
       <Container>
@@ -93,11 +93,11 @@ const About = props => {
         </Grid>
       </Container>
     </Section>
-  );
-};
+  )
+}
 
 About.propTypes = {
   classes: PropTypes.object.isRequired,
-};
+}
 
-export default withStyles(styles)(About);
+export default withStyles(styles)(About)
