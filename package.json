@@ -9,7 +9,8 @@
     "develop": "gatsby develop",
     "start": "yarn run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "lint": "eslint \"src/**\"",
+    "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.0",
@@ -35,6 +36,13 @@
     "styled-jsx": "^3.2.0"
   },
   "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.15.2"
   },
   "repository": {
