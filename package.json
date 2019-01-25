@@ -3,7 +3,7 @@
   "private": true,
   "description": "FarmGoat's website",
   "version": "0.1.0",
-  "license": "MIT",
+  "license": "LGPL-3.0",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
