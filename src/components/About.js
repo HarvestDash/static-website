@@ -7,6 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import Container from './shared-components/Container';
 import Section from './shared-components/Section';
 
+import missionSrc from "../images/mission.svg"
+import visionSrc from "../images/vision.svg"
+
 const styles = theme => ({
   root: {
     textAlign: 'center',
@@ -59,7 +62,7 @@ const About = props => {
             <Paper className={classes.container}>
               <img
                 className={classes.imgMission}
-                src="/static/mission.svg"
+                src={missionSrc}
                 alt="mission"
               />
               <Typography variant="h3" gutterBottom>
@@ -75,7 +78,7 @@ const About = props => {
             <Paper className={classes.container}>
               <img
                 className={classes.imgVision}
-                src="/static/vision.svg"
+                src={visionSrc}
                 alt="vision"
               />
               <Typography variant="h3" gutterBottom>

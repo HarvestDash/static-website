@@ -6,47 +6,48 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Container from './shared-components/Container';
 import Section from './shared-components/Section';
+import avatarSrc from "../images/avatar.svg";
 
 const team = [
   {
     name: 'Rem Lampa',
     designation: 'Co-Founder/CEO',
-    img: 'avatar.svg',
+    img: avatarSrc
   },
   {
     name: 'Alvea Lejano',
     designation: 'Co-Founder/Finance and Research',
-    img: 'avatar.svg',
+    img: avatarSrc
   },
   {
     name: 'Theon Puyat',
     designation: 'Co-Founder/Business Development',
-    img: 'avatar.svg',
+    img: avatarSrc
   },
   {
     name: 'Joselie Castañeda',
     designation: 'Engineering/Architecture',
-    img: 'avatar.svg',
+    img: avatarSrc
   },
   {
     name: 'Billy Wilson Arante',
     designation: 'Engineering',
-    img: 'avatar.svg',
+    img: avatarSrc
   },
   {
     name: 'Nicco Lampa',
     designation: 'Engineering/Data Analytics',
-    img: 'avatar.svg',
+    img: avatarSrc
   },
   {
     name: 'Jerome Estiller',
     designation: 'Engineering/UI and UX',
-    img: 'avatar.svg',
+    img: avatarSrc
   },
   {
     name: 'Bryan Martinez',
     designation: 'Engineering',
-    img: './avatar.svg',
+    img: avatarSrc,
   },
 ];
 
@@ -96,7 +97,7 @@ const Team = props => {
               <Paper className={classes.container}>
                 <img
                   className={classes.avatarImg}
-                  src={`/static/${member.img}`}
+                  src={member.img}
                   alt={member.name}
                 />
                 <Typography variant="h5" gutterBottom>
