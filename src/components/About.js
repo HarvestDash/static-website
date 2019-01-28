@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography'
 import Container from './shared-components/Container'
 import Section from './shared-components/Section'
 
-import missionSrc from "../images/mission.svg"
-import visionSrc from "../images/vision.svg"
+import missionSrc from '../images/mission.svg'
+import visionSrc from '../images/vision.svg'
 
 const styles = theme => ({
   root: {
@@ -76,11 +76,7 @@ const About = props => {
           </Grid>
           <Grid item className={classes.gridItem} md={6} xs={12}>
             <Paper className={classes.container}>
-              <img
-                className={classes.imgVision}
-                src={visionSrc}
-                alt="vision"
-              />
+              <img className={classes.imgVision} src={visionSrc} alt="vision" />
               <Typography variant="h3" gutterBottom>
                 Our Vision
               </Typography>
