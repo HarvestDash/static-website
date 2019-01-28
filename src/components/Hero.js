@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Container from './shared-components/Container';
 import Image from './image';
+import heroSrc from "../images/laptop-browser-view.png"
+import agriSrc from "../images/hero-background-img.jpg"
 
 const styles = theme => ({
   root: {
@@ -20,7 +22,7 @@ const styles = theme => ({
       bottom: 0,
       right: 0,
       left: 0,
-      backgroundImage: "url(../images/hero-background-img.jpg')",
+      backgroundImage: `${agriSrc}`,
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
       [theme.breakpoints.down('sm')]: {
@@ -91,7 +93,11 @@ const Hero = props => {
             </Button>
           </Grid>
           <Grid item className={classes.imgContainer} md={6} xs={12}>
-            <Image name="laptop-browser-view.png"/>
+              <img
+                className={classes.img}
+                src={heroSrc}
+                alt="browser view in laptop"
+              />
           </Grid>
         </Grid>
       </Container>
