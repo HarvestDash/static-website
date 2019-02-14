@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Section = styled.section`
   padding: 8em 0;
@@ -6,6 +6,6 @@ const Section = styled.section`
   @media screen and (max-width: 600px) {
     padding: 4em 0;
   }
-`
+`;
 
-export default Section
+export default Section;

@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import Container from './shared-components/Container'
-import heroSrc from '../images/laptop-browser-view.png'
-import agriSrc from '../images/hero-background-img.jpg'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Container from './shared-components/Container';
+import heroSrc from '../images/laptop-browser-view.png';
+import agriSrc from '../images/hero-background-img.jpg';
 
 const styles = theme => ({
   root: {
@@ -62,10 +62,10 @@ const styles = theme => ({
     fill: '#fafafa',
     marginBottom: '-5px',
   },
-})
+});
 
 const Hero = props => {
-  const { classes } = props
+  const { classes } = props;
   return (
     <section className={classes.root}>
       <Container>
@@ -109,11 +109,11 @@ const Hero = props => {
         </g>
       </svg>
     </section>
-  )
-}
+  );
+};
 
 Hero.propTypes = {
   classes: PropTypes.object.isRequired,
-}
+};
 
-export default withStyles(styles)(Hero)
+export default withStyles(styles)(Hero);
