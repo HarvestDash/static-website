@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
-import Container from './shared-components/Container'
-import Section from './shared-components/Section'
-import avatarSrc from '../images/avatar.svg'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Container from './shared-components/Container';
+import Section from './shared-components/Section';
+import avatarSrc from '../images/avatar.svg';
 
 const team = [
   {
@@ -49,7 +49,7 @@ const team = [
     designation: 'Engineering',
     img: avatarSrc,
   },
-]
+];
 
 const styles = theme => ({
   root: {
@@ -71,10 +71,10 @@ const styles = theme => ({
     marginBottom: '2em',
     borderRadius: '50%',
   },
-})
+});
 
 const Team = props => {
-  const { classes } = props
+  const { classes } = props;
   return (
     <Section id="team" className={classes.root}>
       <Container>
@@ -110,11 +110,11 @@ const Team = props => {
         </Grid>
       </Container>
     </Section>
-  )
-}
+  );
+};
 
 Team.propTypes = {
   classes: PropTypes.object.isRequired,
-}
+};
 
-export default withStyles(styles)(Team)
+export default withStyles(styles)(Team);

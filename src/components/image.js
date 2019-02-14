@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -15,7 +15,7 @@ import Img from 'gatsby-image'
  */
 
 const Image = props => {
-  const { name } = props
+  const { name } = props;
   return (
     <StaticQuery
       query={graphql`
@@ -34,10 +34,10 @@ const Image = props => {
         <Img fluid={data.placeholderImage.childImageSharp.fluid} />
       )}
     />
-  )
-}
+  );
+};
 
 Image.propTypes = {
   name: PropTypes.string.isRequired,
-}
-export default Image
+};
+export default Image;

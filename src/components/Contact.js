@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import Container from './shared-components/Container'
-import Section from './shared-components/Section'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Container from './shared-components/Container';
+import Section from './shared-components/Section';
 
 const styles = {
   root: {
@@ -25,10 +25,10 @@ const styles = {
     marginBottom: '-5px',
     marginTop: '-1px',
   },
-}
+};
 
 const Contact = props => {
-  const { classes } = props
+  const { classes } = props;
 
   return (
     <section id="contact" className={classes.root}>
@@ -78,11 +78,11 @@ const Contact = props => {
         </svg>
       </div>
     </section>
-  )
-}
+  );
+};
 
 Contact.propTypes = {
   classes: PropTypes.object.isRequired,
-}
+};
 
-export default withStyles(styles)(Contact)
+export default withStyles(styles)(Contact);
