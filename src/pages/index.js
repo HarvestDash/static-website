@@ -1,19 +1,9 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Team from '../components/Team';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+import Layout from '../layout';
 
 const LandingPage = () => (
   <React.Fragment>
-    <Navbar />
-    <Hero />
-    <About />
-    <Team />
-    <Contact />
-    <Footer />
+    <Layout>FarmGoat App</Layout>
   </React.Fragment>
 );
 
