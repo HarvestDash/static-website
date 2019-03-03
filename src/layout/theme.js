@@ -1,4 +1,4 @@
-const myTheme = {
+const theme = {
   global: {
     font: {
       family: 'Roboto',
@@ -6,4 +6,4 @@ const myTheme = {
   },
 };
 
-export default myTheme;
+export default theme;
