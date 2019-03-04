@@ -1,7 +1,7 @@
 const theme = {
   global: {
     font: {
-      family: 'Roboto',
+      family: `'Inter UI'`,
     },
   },
 };
