@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { Grommet } from 'grommet';
 
+import 'normalize.css';
+import 'typeface-inter';
+
 import Header from '../components/header';
 import Theme from './theme';
 import '../components/layout.css';
@@ -21,7 +24,7 @@ const Layout = ({ children }) => (
     render={data => (
       <Grommet theme={Theme}>
         <Header siteTitle={data.site.siteMetadata.title} />
-          {children}
+        {children}
       </Grommet>
     )}
   />
