@@ -8,7 +8,6 @@ import 'typeface-inter';
 
 import Header from '../components/Header';
 import Theme from './theme';
-// import '../components/layout.css';
 
 const Layout = ({ children }) => (
   <StaticQuery
