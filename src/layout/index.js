@@ -6,8 +6,9 @@ import { Grommet } from 'grommet';
 import 'normalize.css';
 import 'typeface-inter';
 
-import Header from '../components/Header';
 import Theme from './theme';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -16,16 +17,24 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            social {
+              facebook
+            }
           }
         }
       }
     `}
-    render={data => (
-      <Grommet theme={Theme}>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {children}
-      </Grommet>
-    )}
+    render={data => {
+      const { title, social } = data.site.siteMetadata;
+
+      return (
+        <Grommet theme={Theme}>
+          <Header siteTitle={title} />
+          {children}
+          <Footer siteTitle={title} facebook={social.facebook} />
+        </Grommet>
+      );
+    }}
   />
 );
 

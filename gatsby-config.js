@@ -3,6 +3,9 @@ module.exports = {
     title: `FarmGoat`,
     description: `Make Farming Great Again`,
     author: `@farmgoat`,
+    social: {
+      facebook: `https://web.facebook.com/OfficialFarmGoat/`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,4 +34,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};
