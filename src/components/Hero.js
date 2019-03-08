@@ -19,10 +19,10 @@ const Hero = ({ title, slogan }) => (
         Email
       </Text>
       <Box direction="row" align="center" justify="start" wrap>
-        <Box width="50%" align="start">
+        <Box align="start" pad={{ right: 'small' }}>
           <StyledTextInput type="email" name="email" placeholder="your email" />
         </Box>
-        <Button primary label="Sign Up Now" margin={{ left: 'small' }} />
+        <Button primary label="Sign Up Now" margin={{ vertical: 'small' }} />
       </Box>
     </Container>
   </Box>
