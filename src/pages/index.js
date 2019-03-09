@@ -1,9 +1,12 @@
 import React from 'react';
 import Layout from '../layout';
+import ForWhom from '../components/ForWhomSection';
 
 const LandingPage = () => (
   <React.Fragment>
-    <Layout>FarmGoat App</Layout>
+    <Layout>
+      <ForWhom />
+    </Layout>
   </React.Fragment>
 );
 
