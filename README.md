@@ -8,7 +8,7 @@
  Make Farming Great Again!
 </h3>
 
-FarmGoat's static website powered by [Gatsby](https://www.gatsbyjs.org/) and using [Material-UI](https://material-ui.com/) for design.
+FarmGoat's static website powered by [Gatsby](https://www.gatsbyjs.org/) and using [Grommet](https://v2.grommet.io/) and [styled-components](https://www.styled-components.com/) for design.
 
 ## 🚀 Quick start
 
