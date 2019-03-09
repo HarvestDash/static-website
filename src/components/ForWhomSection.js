@@ -9,7 +9,7 @@ const ForWhom = () => (
       justify="center"
       align="center"
     >
-      <Text>FarmGoat is For</Text>
+      <Heading level="2">FarmGoat is for</Heading>
     </Box>
     <Box justify="center" align="center">
       <Grid
