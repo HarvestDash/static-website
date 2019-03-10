@@ -1,26 +1,30 @@
 import React from 'react';
 import { Box, Heading, Grid } from 'grommet';
+import styled from 'styled-components';
 import Container from '../shared-components/Container';
+
+const BoxDesc = styled.div`
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: grey;
+  margin: 25px;
+  `;
 
 const ForWhom = () => (
   <Box as="section" justify="center" align="center">
     <Container  justify="center" align="center">
       <Heading level="2">FarmGoat is for</Heading>
     </Container>
-    <Container justify="center" align="center">
-      <Grid
-        rows={['medium', 'medium']}
-        columns={['medium', 'medium']}
-        gap="large"
-        margin={{ top: '50px' }}
-      >
-        <Box background="light-5" align="center" justify="center">
-          Urban Farmers
-        </Box>
-        <Box background="light-2" align="center" justify="center">
-          Local Businesses
-        </Box>
-      </Grid>
+    <Container justify="center" align="center" direction="row" wrap>
+      <BoxDesc>
+        Urban Farmers
+      </BoxDesc>
+      <BoxDesc>
+        Local Businesses
+      </BoxDesc>
     </Container>
   </Box>
 );
