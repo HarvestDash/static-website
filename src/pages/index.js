@@ -9,7 +9,7 @@ const LandingPage = () => (
     <Layout>
       <Hero
         title="Making farming great again!"
-        slogan="Connecting urban farmers and buyers."
+        slogan="Connecting urban farmers and local businesses."
       />
       <ForWhom />
     </Layout>
