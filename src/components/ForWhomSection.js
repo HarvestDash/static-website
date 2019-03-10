@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Heading, Grid } from 'grommet';
+import Container from '../shared-components/Container';
 
 const ForWhom = () => (
-  <Box as="section">
-    <Box justify="center" align="center">
+  <Box as="section" justify="center" align="center">
+    <Container  justify="center" align="center">
       <Heading level="2">FarmGoat is for</Heading>
-    </Box>
-    <Box justify="center" align="center">
+    </Container>
+    <Container justify="center" align="center">
       <Grid
         rows={['medium', 'medium']}
         columns={['medium', 'medium']}
@@ -17,10 +18,10 @@ const ForWhom = () => (
           Urban Farmers
         </Box>
         <Box background="light-2" align="center" justify="center">
-          Buyers
+          Local Businesses
         </Box>
       </Grid>
-    </Box>
+    </Container>
   </Box>
 );
 
