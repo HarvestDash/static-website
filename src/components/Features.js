@@ -37,7 +37,7 @@ const Features = () => (
         <Box height="small" width="small" alignSelf="center">
           <Image fit="cover" src={FeatureImage1} />
         </Box>
-        <Text margin={{ top: '10px' }}>It's Free</Text>
+        <Text margin={{ top: '10px' }}>Buy Local</Text>
       </FeatureBox>
       <FeatureBox>
         <Box height="small" width="small" alignSelf="center">
