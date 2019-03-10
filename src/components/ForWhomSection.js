@@ -15,9 +15,7 @@ const BoxDesc = styled.div`
 
 const ForWhom = () => (
   <Box as="section" justify="center" align="center">
-    <Container justify="center" align="center">
-      <Heading level="2">FarmGoat is for</Heading>
-    </Container>
+    <Heading level="2">FarmGoat is for</Heading>
     <Container justify="center" align="center" direction="row" wrap>
       <BoxDesc>Urban Farmers</BoxDesc>
       <BoxDesc>Local Businesses</BoxDesc>
