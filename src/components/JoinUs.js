@@ -12,9 +12,9 @@ const JoinUs = () => (
       <Heading level="2">Join Us Today!</Heading>
       <Text responsive textAlign="center" margin={{ bottom: 'medium' }}>
         If you&apos;re an <strong>urban farmer</strong>, interested in marketing
-        and selling your produce online or if your a{' '}
-        <strong>local business</strong>, interested to buy agricultural products
-        directly from farms, join us today! It&apos;s free.
+        and selling your produce online or if you&apos;re a{' '}
+        <strong>local business</strong>, interested in buying agricultural
+        products directly from farms, join us today! Registration is free!
       </Text>
       <Box direction="row" align="center" justify="center" wrap>
         <Button primary label="Sign Up as a Farmer" margin="small" />
