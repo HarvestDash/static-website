@@ -17,8 +17,17 @@ const JoinUs = () => (
         products directly from farms, join us today! Registration is free!
       </Text>
       <Box direction="row" align="center" justify="center" wrap>
-        <Button primary label="Sign Up as a Farmer" margin="small" />
-        <Button label="Sign Up as a Local Business" margin="small" />
+        <Button
+          href="https://form.responster.com/ukgxQr"
+          primary
+          label="Sign Up as a Farmer"
+          margin="small"
+        />
+        <Button
+          href="https://form.responster.com/IQy9YS"
+          label="Sign Up as a Local Business"
+          margin="small"
+        />
       </Box>
     </Container>
   </Box>
