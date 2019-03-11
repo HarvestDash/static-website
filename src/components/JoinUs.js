@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Button, Heading, Text } from 'grommet';
+import { Box, Heading, Text } from 'grommet';
+import SignUpButtons from './SignUpButtons';
 import Container from '../shared-components/Container';
 
 const JoinUs = () => (
@@ -17,17 +18,7 @@ const JoinUs = () => (
         products directly from farms, join us today! Registration is free!
       </Text>
       <Box direction="row" align="center" justify="center" wrap>
-        <Button
-          href="https://form.responster.com/ukgxQr"
-          primary
-          label="Sign Up as a Farmer"
-          margin="small"
-        />
-        <Button
-          href="https://form.responster.com/IQy9YS"
-          label="Sign Up as a Local Business"
-          margin="small"
-        />
+        <SignUpButtons position="center" />
       </Box>
     </Container>
   </Box>
