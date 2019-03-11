@@ -2,9 +2,10 @@ import React from 'react';
 import Layout from '../layout';
 
 import Hero from '../components/Hero';
-import ForWhom from '../components/ForWhomSection';
+import ForWhom from '../components/ForWhom';
 import Features from '../components/Features';
 import JoinUs from '../components/JoinUs';
+import Contact from '../components/Contact';
 
 const LandingPage = () => (
   <React.Fragment>
@@ -16,6 +17,7 @@ const LandingPage = () => (
       <ForWhom />
       <Features />
       <JoinUs />
+      <Contact />
     </Layout>
   </React.Fragment>
 );
