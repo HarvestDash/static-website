@@ -5,7 +5,7 @@
   FarmGoat Website
 </h1>
 <h3 align="center">
- Make Farming Great Again!
+ Seeding the Future!
 </h3>
 
 FarmGoat's static website powered by [Gatsby](https://www.gatsbyjs.org/) and using [Grommet](https://v2.grommet.io/) and [styled-components](https://www.styled-components.com/) for design.

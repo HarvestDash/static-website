@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `FarmGoat`,
-    description: `Make Farming Great Again`,
+    description: `Seeding the Future!`,
     author: `@farmgoat`,
     social: {
       facebook: `https://web.facebook.com/OfficialFarmGoat/`,
