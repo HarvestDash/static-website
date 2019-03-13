@@ -34,6 +34,7 @@ const Features = () => (
       align="center"
       direction="row"
       margin={{ top: '20px' }}
+      wrap
     >
       <FeatureBox>
         <Box height="small" width="small" alignSelf="center">
