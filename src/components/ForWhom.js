@@ -10,9 +10,9 @@ const BoxDesc = styled(Box)`
 `;
 
 const ForWhom = () => (
-  <Box as="section" justify="center" align="center">
+  <Container justify="center" align="center">
     <Heading level="2">FarmGoat is for</Heading>
-    <Container justify="center" align="center" direction="row" wrap>
+    <Box justify="center" align="center" direction="row" wrap>
       <BoxDesc justify="center" align="center" margin="25px" direction="column">
         <Grow color="plain" size="xlarge" />
         <Text weight="bold" margin={{ top: '25px' }}>
@@ -25,8 +25,8 @@ const ForWhom = () => (
           Local Businesses
         </Text>
       </BoxDesc>
-    </Container>
-  </Box>
+    </Box>
+  </Container>
 );
 
 export default ForWhom;
