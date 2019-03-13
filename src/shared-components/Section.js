@@ -19,7 +19,7 @@ Section.propTypes = {
   as: PropTypes.string,
   align: PropTypes.string,
   justify: PropTypes.string,
-  pad: PropTypes.object,
+  pad: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
 
 Section.defaultProps = {
