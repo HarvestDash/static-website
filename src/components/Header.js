@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { Box, Text } from 'grommet';
+import { Text } from 'grommet';
+import Section from '../shared-components/Section';
 import Container from '../shared-components/Container';
 
 import FarmGoatLogo from '../images/logo/farmgoat-logo-flat.svg';
@@ -30,8 +31,8 @@ const NavList = styled.ul`
 `;
 
 const Header = ({ siteTitle }) => (
-  <Box as="header" justify="center" align="center">
-    <Container direction="row" justify="between" align="center" pad="small">
+  <Section as="header" pad="small">
+    <Container direction="row" justify="between" align="center">
       <LogoLink to="/">
         <ImgLogo src={FarmGoatLogo} alt={siteTitle} />
         <Text size="large" weight="bold" margin={{ left: '0.75em' }}>
@@ -47,7 +48,7 @@ const Header = ({ siteTitle }) => (
         </NavList>
       </nav>
     </Container>
-  </Box>
+  </Section>
 );
 
 Header.propTypes = {

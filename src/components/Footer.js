@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Button, ResponsiveContext, Text } from 'grommet';
 import { Facebook } from 'grommet-icons';
+import Section from '../shared-components/Section';
 import Container from '../shared-components/Container';
 
 const Footer = ({ siteTitle, facebook }) => (
   <ResponsiveContext.Consumer>
     {size => (
-      <Box as="footer" align="center" justify="center">
-        <Container pad="small">
+      <Section as="footer">
+        <Container>
           <Box
             direction="row"
             align="center"
@@ -39,7 +40,7 @@ const Footer = ({ siteTitle, facebook }) => (
             </Text>
           </Box>
         </Container>
-      </Box>
+      </Section>
     )}
   </ResponsiveContext.Consumer>
 );

@@ -5,17 +5,15 @@ import SignUpButtons from './SignUpButtons';
 import Container from '../shared-components/Container';
 
 const Hero = ({ title, slogan }) => (
-  <Box as="section" align="center" justify="center">
-    <Container pad={{ vertical: 'xlarge', horizontal: 'small' }}>
-      <Heading level="1" margin="none">
-        {title}
-      </Heading>
-      <Heading level="2">{slogan}</Heading>
-      <Box direction="row" align="center" justify="start" wrap>
-        <SignUpButtons position="left" />
-      </Box>
-    </Container>
-  </Box>
+  <Container>
+    <Heading level="1" margin="none">
+      {title}
+    </Heading>
+    <Heading level="2">{slogan}</Heading>
+    <Box direction="row" align="center" justify="start" wrap>
+      <SignUpButtons position="left" />
+    </Box>
+  </Container>
 );
 
 Hero.propTypes = {

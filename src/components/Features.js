@@ -17,7 +17,7 @@ const FeatureBox = styled(Box)`
 `;
 
 const Features = () => (
-  <Box as="section" justify="center" align="center">
+  <Container as="section" justify="center" align="center">
     <Text
       responsive
       textAlign="center"
@@ -29,12 +29,12 @@ const Features = () => (
       <br />
       Sell directly to local businesses and buy directly from urban farmers.
     </Text>
-    <Container
+    <Box
       justify="center"
       align="center"
       direction="row"
       margin={{ top: '20px' }}
-      wrap="no-wrap"
+      wrap
     >
       <FeatureBox>
         <Box height="small" width="small" alignSelf="center">
@@ -60,8 +60,8 @@ const Features = () => (
         </Box>
         <Text margin={{ top: '10px' }}>100% Transparent</Text>
       </FeatureBox>
-    </Container>
-  </Box>
+    </Box>
+  </Container>
 );
 
 export default Features;
