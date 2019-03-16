@@ -14,13 +14,13 @@ const ForWhom = () => (
     <Heading level="2">FarmGoat is for</Heading>
     <Container justify="center" align="center" direction="row" wrap>
       <BoxDesc justify="center" align="center" margin="25px" direction="column">
-        <Grow color="#F1C410" size="xlarge" />
+        <Grow color="brand" size="xlarge" />
         <Text weight="bold" margin={{ top: '25px' }}>
           Urban Farmers
         </Text>
       </BoxDesc>
       <BoxDesc justify="center" align="center" margin="25px" direction="column">
-        <BusinessService color="#F1C410" size="xlarge" />
+        <BusinessService color="brand" size="xlarge" />
         <Text weight="bold" margin={{ top: '25px' }}>
           Local Businesses
         </Text>
