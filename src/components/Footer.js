@@ -8,15 +8,20 @@ import Container from '../shared-components/Container';
 const Footer = ({ siteTitle, facebook }) => (
   <ResponsiveContext.Consumer>
     {size => (
-      <Section as="footer">
+      <Section
+        as="footer"
+        background="lightgray"
+        pad={{ top: 'medium', bottom: 'large', horizontal: 'large' }}
+        margin={{ top: '-6px' }}
+      >
         <Container>
           <Box
             direction="row"
             align="center"
             justify="center"
-            pad={{ vertical: 'large' }}
+            pad={{ bottom: 'large' }}
           >
-            <Text>Like us on:</Text>
+            <Text color="text-gray">Like us on:</Text>
             <Button
               icon={<Facebook color="#3b5998" />}
               href={facebook}
@@ -31,11 +36,12 @@ const Footer = ({ siteTitle, facebook }) => (
           >
             <Text
               size="small"
+              color="text-gray"
               margin={size === 'small' ? { bottom: 'small' } : null}
             >
               Terms of Service | Privacy Policy
             </Text>
-            <Text size="small">
+            <Text size="small" color="text-gray">
               &copy; {siteTitle} {new Date().getFullYear().toString()}
             </Text>
           </Box>
