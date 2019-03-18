@@ -12,7 +12,18 @@ const FixedHeader = styled.header`
   top: 0;
   right: 0;
   left: 0;
-  padding: 0.5em;
+  padding: ${props => (props.pin ? '0.3em' : '0.5em')} 0.5em;
+  ${props =>
+    props.pin
+      ? `
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    `
+      : `
+    background-color: transparent;
+    border-bottom: none;
+    `}
+  transition: all 0.3s ease;
 `;
 
 const ImgLogo = styled.img`
@@ -37,36 +48,68 @@ const NavList = styled.ul`
   }
 `;
 
-const Header = ({ siteTitle }) => (
-  <FixedHeader>
-    <Container
-      direction="row"
-      justify="between"
-      align="center"
-      margin={{ horizontal: 'auto' }}
-    >
-      <LogoLink to="/">
-        <ImgLogo src={FarmGoatLogo} alt={siteTitle} />
-        <Text
-          color="brand"
-          size="large"
-          weight="bold"
-          margin={{ left: '0.75em' }}
-        >
-          {siteTitle}
-        </Text>
-      </LogoLink>
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isPin: false,
+    };
 
-      <nav role="navigation">
-        <NavList>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </NavList>
-      </nav>
-    </Container>
-  </FixedHeader>
-);
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    if (window.scrollY >= 20) {
+      this.setState({ isPin: true });
+    } else {
+      this.setState({ isPin: false });
+    }
+  }
+
+  render() {
+    const { siteTitle } = this.props;
+    const { isPin } = this.state;
+
+    return (
+      <FixedHeader pin={isPin}>
+        <Container
+          direction="row"
+          justify="between"
+          align="center"
+          margin={{ horizontal: 'auto' }}
+        >
+          <LogoLink to="/">
+            <ImgLogo src={FarmGoatLogo} alt={siteTitle} />
+            <Text
+              color="brand"
+              size="large"
+              weight="bold"
+              margin={{ left: '0.75em' }}
+            >
+              {siteTitle}
+            </Text>
+          </LogoLink>
+
+          <nav role="navigation">
+            <NavList>
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact</li>
+            </NavList>
+          </nav>
+        </Container>
+      </FixedHeader>
+    );
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
