@@ -6,16 +6,16 @@ const Contact = () => (
   <Container align="center" justify="center">
     <Heading level="2">Want to talk to us?</Heading>
     <Text
-      size="large"
       responsive
       textAlign="center"
+      color="text-gray"
       margin={{ bottom: 'medium' }}
     >
       We&apos;d love to hear from you!
     </Text>
     <Box direction="column" align="center" justify="center" wrap>
       <Button primary label="Email Us" margin="small" />
-      <Text>or</Text>
+      <Text color="text-gray">or</Text>
       <Button label="Message us on Facebook" margin="small" />
     </Box>
   </Container>
