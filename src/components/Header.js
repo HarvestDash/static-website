@@ -3,10 +3,17 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { Text } from 'grommet';
-import Section from '../shared-components/Section';
 import Container from '../shared-components/Container';
 
 import FarmGoatLogo from '../images/logo/farmgoat-logo-flat.svg';
+
+const FixedHeader = styled.header`
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0.5em;
+`;
 
 const ImgLogo = styled.img`
   width: 40px;
@@ -31,11 +38,21 @@ const NavList = styled.ul`
 `;
 
 const Header = ({ siteTitle }) => (
-  <Section as="header" pad="small">
-    <Container direction="row" justify="between" align="center">
+  <FixedHeader>
+    <Container
+      direction="row"
+      justify="between"
+      align="center"
+      margin={{ horizontal: 'auto' }}
+    >
       <LogoLink to="/">
         <ImgLogo src={FarmGoatLogo} alt={siteTitle} />
-        <Text size="large" weight="bold" margin={{ left: '0.75em' }}>
+        <Text
+          color="brand"
+          size="large"
+          weight="bold"
+          margin={{ left: '0.75em' }}
+        >
           {siteTitle}
         </Text>
       </LogoLink>
@@ -48,7 +65,7 @@ const Header = ({ siteTitle }) => (
         </NavList>
       </nav>
     </Container>
-  </Section>
+  </FixedHeader>
 );
 
 Header.propTypes = {
