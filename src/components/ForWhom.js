@@ -1,30 +1,20 @@
 import React from 'react';
-import { Box, Heading, Text } from 'grommet';
-import styled from 'styled-components';
+import { Box, Heading } from 'grommet';
 import { Grow, BusinessService } from 'grommet-icons';
 import Container from '../shared-components/Container';
-
-const BoxDesc = styled(Box)`
-  width: 300px;
-  height: 300px;
-`;
 
 const ForWhom = () => (
   <Container justify="center" align="center">
     <Heading level="2">FarmGoat is for</Heading>
-    <Box justify="center" align="center" direction="row" wrap>
-      <BoxDesc justify="center" align="center" margin="25px" direction="column">
+    <Box width="100%" justify="around" align="center" direction="row" wrap>
+      <Box justify="center" align="center" margin="large" direction="column">
         <Grow color="brand" size="xlarge" />
-        <Text weight="bold" margin={{ top: '25px' }}>
-          Urban Farmers
-        </Text>
-      </BoxDesc>
-      <BoxDesc justify="center" align="center" margin="25px" direction="column">
+        <Heading level="3">Urban Farmers</Heading>
+      </Box>
+      <Box justify="center" align="center" margin="large" direction="column">
         <BusinessService color="brand" size="xlarge" />
-        <Text weight="bold" margin={{ top: '25px' }}>
-          Local Businesses
-        </Text>
-      </BoxDesc>
+        <Heading level="3">Local Businesses</Heading>
+      </Box>
     </Box>
   </Container>
 );
