@@ -52,7 +52,7 @@ const LandingPage = () => {
         </Section>
         <BottomSeparator color={accent2} />
         <Section pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}>
-          <Contact />
+          <Contact email="sample@gmail.com" facebook="https://facebook.com" />
         </Section>
         <FooterSeparator color="lightgray" />
       </Layout>
