@@ -21,12 +21,17 @@ const Features = () => (
     <Text
       responsive
       textAlign="center"
-      size="medium"
-      weight="bold"
-      margin="10px"
+      size="large"
+      margin={{ bottom: 'small' }}
     >
       Farmgoat enables transparent selling and buying of agricultural products.
-      <br />
+    </Text>
+    <Text
+      responsive
+      textAlign="center"
+      size="large"
+      margin={{ bottom: 'medium' }}
+    >
       Sell directly to local businesses and buy directly from urban farmers.
     </Text>
     <Box
