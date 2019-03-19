@@ -3,8 +3,10 @@ module.exports = {
     title: `FarmGoat`,
     description: `Seeding the Future!`,
     author: `@farmgoat`,
+    email: `rem@remlampa.com`,
     social: {
-      facebook: `https://web.facebook.com/OfficialFarmGoat/`,
+      facebook: `https://facebook.com/OfficialFarmGoat/`,
+      messenger: `https://m.me/OfficialFarmGoat`,
     },
   },
   plugins: [
