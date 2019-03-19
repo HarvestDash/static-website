@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import Layout from '../layout';
 import Section from '../shared-components/Section';
 import Hero from '../components/Hero';
@@ -14,10 +16,12 @@ import {
 } from '../components/separator';
 import theme from '../layout/theme';
 
-const LandingPage = () => {
+const LandingPage = ({ data }) => {
   const { colors } = theme.global;
   const accent1 = colors['accent-1'];
   const accent2 = colors['accent-2'];
+
+  const { email, social } = data.site.siteMetadata;
 
   return (
     <React.Fragment>
@@ -52,11 +56,29 @@ const LandingPage = () => {
         </Section>
         <BottomSeparator color={accent2} />
         <Section pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}>
-          <Contact email="sample@gmail.com" facebook="https://facebook.com" />
+          <Contact email={email} facebook={social.messenger} />
         </Section>
         <FooterSeparator color="lightgray" />
       </Layout>
     </React.Fragment>
   );
 };
+
+LandingPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
 export default LandingPage;
+
+export const pageQuery = graphql`
+  query PageQuery {
+    site {
+      siteMetadata {
+        email
+        social {
+          messenger
+        }
+      }
+    }
+  }
+`;
