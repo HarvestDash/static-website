@@ -15,13 +15,13 @@ const FixedHeader = styled.header`
         position: fixed;
         background-color: white;
         border-bottom: 1px solid lightgray;
-        padding: 0.5em 0.75em;  
+        padding: 0.75em 1em;  
         `
       : `
         position: absolute;
         background-color: transparent;
         border-bottom: none;
-        padding: 0.75em;
+        padding: 1em;
   `}
   top: 0;
   right: 0;
