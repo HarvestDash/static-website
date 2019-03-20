@@ -41,7 +41,7 @@ const NavItems = ({ isMobile }) => {
           <Button
             plain
             fill
-            hoverIndicator="light-3"
+            hoverIndicator="light-2"
             label={<NavButton name={nav.name} icon={nav.icon} />}
           />
         )}
