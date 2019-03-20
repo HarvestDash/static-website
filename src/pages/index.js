@@ -26,7 +26,7 @@ const LandingPage = ({ data }) => {
   return (
     <React.Fragment>
       <Layout>
-        <Section background="lightgray" pad="none">
+        <Section background="lightgray" pad={{ top: 'xlarge' }}>
           <Section
             pad={{ top: 'xlarge', bottom: 'large', horizontal: 'large' }}
           >
@@ -37,21 +37,22 @@ const LandingPage = ({ data }) => {
           </Section>
           <HeroSeparator color="#fff" />
         </Section>
-        <Section id="about">
+        <Section id="about" background="white" margin={{ top: '-1px' }}>
           <ForWhom />
         </Section>
         <TopSeparator color={accent1} />
         <Section
           background="accent-1"
           margin={{ top: '-6px' }}
-          pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}
+          pad={{ vertical: 'xlarge', horizontal: 'large' }}
         >
           <Features />
         </Section>
         <Section
           id="join"
           background="accent-2"
-          pad={{ top: 'xlarge', bottom: 'large', horizontal: 'large' }}
+          pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}
+          margin={{ bottom: '-1px' }}
         >
           <JoinUs />
         </Section>
