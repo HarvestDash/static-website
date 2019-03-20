@@ -37,7 +37,7 @@ const LandingPage = ({ data }) => {
           </Section>
           <HeroSeparator color="#fff" />
         </Section>
-        <Section>
+        <Section id="about">
           <ForWhom />
         </Section>
         <TopSeparator color={accent1} />
@@ -49,13 +49,17 @@ const LandingPage = ({ data }) => {
           <Features />
         </Section>
         <Section
+          id="join"
           background="accent-2"
           pad={{ top: 'xlarge', bottom: 'large', horizontal: 'large' }}
         >
           <JoinUs />
         </Section>
         <BottomSeparator color={accent2} />
-        <Section pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}>
+        <Section
+          id="contact"
+          pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}
+        >
           <Contact email={email} facebook={social.messenger} />
         </Section>
         <FooterSeparator color="lightgray" />

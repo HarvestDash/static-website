@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { Box, Text, ResponsiveContext } from 'grommet';
+import { Box, Text, ResponsiveContext, Button } from 'grommet';
+import { Link as ScrollTo } from 'react-scroll';
 import Container from '../shared-components/Container';
 
 import FarmGoatLogo from '../images/logo/farmgoat-logo-flat.svg';
@@ -62,6 +63,31 @@ const BottomNav = styled.div`
   border-top: 1px solid lightgray;
 `;
 
+const NavItems = () => {
+  const navItems = [
+    {
+      name: 'About',
+      path: 'about',
+    },
+    {
+      name: 'Join Us',
+      path: 'join',
+    },
+    {
+      name: 'Contact',
+      path: 'contact',
+    },
+  ];
+
+  return navItems.map(nav => (
+    <li key={nav.path}>
+      <ScrollTo to={nav.path} smooth offset={-50} duration={500}>
+        <Button plain hoverIndicator={{ background: false }} label={nav.name} />
+      </ScrollTo>
+    </li>
+  ));
+};
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -118,9 +144,7 @@ class Header extends React.Component {
                 {size !== 'small' && (
                   <nav role="navigation">
                     <NavList>
-                      <li>Home</li>
-                      <li>About</li>
-                      <li>Contact</li>
+                      <NavItems />
                     </NavList>
                   </nav>
                 )}
