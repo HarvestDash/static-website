@@ -2,27 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { Text } from 'grommet';
+import { Box, Text, ResponsiveContext } from 'grommet';
 import Container from '../shared-components/Container';
 
 import FarmGoatLogo from '../images/logo/farmgoat-logo-flat.svg';
 
 const FixedHeader = styled.header`
-  position: fixed;
+  ${props =>
+    props.pin && !props.mobile
+      ? `
+        position: fixed;
+        background-color: white;
+        border-bottom: 1px solid lightgray;
+        padding: 0.3em 0.5em;  
+        `
+      : `
+        position: absolute;
+        background-color: transparent;
+        border-bottom: none;
+        padding: 0.5em;
+  `}
   top: 0;
   right: 0;
   left: 0;
-  padding: ${props => (props.pin ? '0.3em' : '0.5em')} 0.5em;
-  ${props =>
-    props.pin
-      ? `
-    background-color: white;
-    border-bottom: 1px solid lightgray;
-    `
-      : `
-    background-color: transparent;
-    border-bottom: none;
-    `}
   transition: all 0.3s ease;
 `;
 
@@ -41,11 +43,23 @@ const LogoLink = styled(Link)`
 const NavList = styled.ul`
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
   & li {
-    display: inline;
-    margin-left: 1em;
+    margin: ${props => (props.isMobile ? '0 1em' : '0 0 0 1em')};
   }
+`;
+
+const BottomNav = styled.div`
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 1px solid lightgray;
 `;
 
 class Header extends React.Component {
@@ -67,7 +81,7 @@ class Header extends React.Component {
   }
 
   handleScroll() {
-    if (window.scrollY >= 20) {
+    if (window.scrollY > 0) {
       this.setState({ isPin: true });
     } else {
       this.setState({ isPin: false });
@@ -79,34 +93,54 @@ class Header extends React.Component {
     const { isPin } = this.state;
 
     return (
-      <FixedHeader pin={isPin}>
-        <Container
-          direction="row"
-          justify="between"
-          align="center"
-          margin={{ horizontal: 'auto' }}
-        >
-          <LogoLink to="/">
-            <ImgLogo src={FarmGoatLogo} alt={siteTitle} />
-            <Text
-              color="brand"
-              size="large"
-              weight="bold"
-              margin={{ left: '0.75em' }}
-            >
-              {siteTitle}
-            </Text>
-          </LogoLink>
+      <ResponsiveContext.Consumer>
+        {size => (
+          <React.Fragment>
+            <FixedHeader pin={isPin} mobile={size === 'small'}>
+              <Container
+                direction="row"
+                justify="between"
+                align="center"
+                margin={{ horizontal: 'auto' }}
+              >
+                <LogoLink to="/">
+                  <ImgLogo src={FarmGoatLogo} alt={siteTitle} />
+                  <Text
+                    color="brand"
+                    size="large"
+                    weight="bold"
+                    margin={{ left: '0.75em' }}
+                  >
+                    {siteTitle}
+                  </Text>
+                </LogoLink>
 
-          <nav role="navigation">
-            <NavList>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
-            </NavList>
-          </nav>
-        </Container>
-      </FixedHeader>
+                {size !== 'small' && (
+                  <nav role="navigation">
+                    <NavList>
+                      <li>Home</li>
+                      <li>About</li>
+                      <li>Contact</li>
+                    </NavList>
+                  </nav>
+                )}
+              </Container>
+            </FixedHeader>
+
+            {size === 'small' && (
+              <BottomNav>
+                <Box as="nav" role="navigation" align="center" justify="start">
+                  <NavList isMobile>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                  </NavList>
+                </Box>
+              </BottomNav>
+            )}
+          </React.Fragment>
+        )}
+      </ResponsiveContext.Consumer>
     );
   }
 }
