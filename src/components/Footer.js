@@ -11,7 +11,11 @@ const Footer = ({ siteTitle, facebook }) => (
       <Section
         as="footer"
         background="lightgray"
-        pad={{ top: 'medium', bottom: 'large', horizontal: 'large' }}
+        pad={{
+          top: 'medium',
+          bottom: size !== 'small' ? 'large' : '6em',
+          horizontal: 'large',
+        }}
         margin={{ top: '-6px' }}
       >
         <Container>
