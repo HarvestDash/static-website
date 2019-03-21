@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { Box } from 'grommet';
 import Layout from '../layout';
 import Section from '../shared-components/Section';
 import Hero from '../components/Hero';
@@ -35,15 +36,18 @@ const LandingPage = ({ data }) => {
               slogan="Connecting urban farmers and local businesses."
             />
           </Section>
-          <HeroSeparator color="#fff" />
+          <Box width="full" margin={{ bottom: '-1px' }}>
+            <HeroSeparator color="#fff" />
+          </Box>
         </Section>
-        <Section id="about" background="white" margin={{ top: '-1px' }}>
+        <Section id="about" background="white">
           <ForWhom />
         </Section>
-        <TopSeparator color={accent1} />
+        <Box width="full" margin={{ bottom: '-1px' }}>
+          <TopSeparator color={accent1} />
+        </Box>
         <Section
           background="accent-1"
-          margin={{ top: '-6px' }}
           pad={{ vertical: 'xlarge', horizontal: 'large' }}
         >
           <Features />
@@ -52,18 +56,21 @@ const LandingPage = ({ data }) => {
           id="join"
           background="accent-2"
           pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}
-          margin={{ bottom: '-1px' }}
         >
           <JoinUs />
         </Section>
-        <BottomSeparator color={accent2} />
+        <Box width="full" margin={{ top: '-1px' }}>
+          <BottomSeparator color={accent2} />
+        </Box>
         <Section
           id="contact"
           pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}
         >
           <Contact email={email} facebook={social.messenger} />
         </Section>
-        <FooterSeparator color="lightgray" />
+        <Box width="full" margin={{ bottom: '-1px' }}>
+          <FooterSeparator color="lightgray" />
+        </Box>
       </Layout>
     </React.Fragment>
   );
