@@ -37,13 +37,12 @@ const LandingPage = ({ data }) => {
           </Section>
           <HeroSeparator color="#fff" />
         </Section>
-        <Section id="about" background="white" margin={{ top: '-1px' }}>
+        <Section id="about" background="white">
           <ForWhom />
         </Section>
         <TopSeparator color={accent1} />
         <Section
           background="accent-1"
-          margin={{ top: '-6px' }}
           pad={{ vertical: 'xlarge', horizontal: 'large' }}
         >
           <Features />
@@ -52,7 +51,6 @@ const LandingPage = ({ data }) => {
           id="join"
           background="accent-2"
           pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}
-          margin={{ bottom: '-1px' }}
         >
           <JoinUs />
         </Section>

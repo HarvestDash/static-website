@@ -16,7 +16,6 @@ const Footer = ({ siteTitle, facebook }) => (
           bottom: size !== 'small' ? 'large' : '6em',
           horizontal: 'large',
         }}
-        margin={{ top: '-6px' }}
       >
         <Container>
           <Box
