@@ -18,8 +18,8 @@ const Contact = ({ email, facebook }) => (
       <Button
         primary
         href={`mailto:${email}`}
-        label="Email Us"
-        margin="small"
+        label="Send us an Email"
+        margin={{ vertical: 'small' }}
       />
       <Text color="text-gray">or</Text>
       <Button
@@ -27,7 +27,7 @@ const Contact = ({ email, facebook }) => (
         target="_blank"
         rel="noopener noreferrer"
         label="Message us on Facebook"
-        margin="small"
+        margin={{ vertical: 'small' }}
       />
     </Box>
   </Container>
