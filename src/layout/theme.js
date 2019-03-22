@@ -1,5 +1,6 @@
 import { grommet } from 'grommet/themes';
 import { deepMerge } from 'grommet/utils';
+import { css } from 'styled-components';
 
 const theme = deepMerge(grommet, {
   global: {
@@ -17,6 +18,18 @@ const theme = deepMerge(grommet, {
       'accent-2': '#3D5199',
       'text-gray': '#586069',
     },
+  },
+  button: {
+    extend: css`
+      text-align: center;
+      ${props => !props.plain && 'font-weight: 500;'};
+      ${props =>
+        props.responsive &&
+        `
+        padding-left: 13px;
+        padding-right: 13px;
+      `}
+    `,
   },
 });
 

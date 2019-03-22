@@ -35,6 +35,7 @@ const SignUpButtons = ({ position }) => (
                   horizontal: 'auto',
                 }),
           }}
+          responsive={size === 'small'}
         />
       </React.Fragment>
     )}
