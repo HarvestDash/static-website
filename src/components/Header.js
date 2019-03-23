@@ -10,7 +10,7 @@ import FarmGoatLogo from '../images/logo/farmgoat-logo-flat.svg';
 
 const FixedHeader = styled.header`
   ${props =>
-    props.pin && !props.mobile
+    props.pin
       ? `
         position: fixed;
         background-color: white;
@@ -100,7 +100,7 @@ class Header extends React.Component {
       <ResponsiveContext.Consumer>
         {size => (
           <React.Fragment>
-            <FixedHeader pin={isPin} mobile={size === 'small'}>
+            <FixedHeader pin={isPin}>
               <Container
                 direction="row"
                 justify="between"
