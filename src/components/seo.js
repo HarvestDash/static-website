@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import favicon16 from '../images/favicon/favicon-16x16.png';
+import favicon32 from '../images/favicon/favicon-32x32.png';
+import favicon64 from '../images/favicon/favicon-64x64.png';
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -20,8 +23,7 @@ function SEO({ description, lang, meta, keywords, title }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description;
+        const metaDescription = description;
         return (
           <Helmet
             htmlAttributes={{
@@ -72,6 +74,21 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : []
               )
               .concat(meta)}
+            link={[
+              {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '16x16',
+                href: `${favicon16}`,
+              },
+              {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '32x32',
+                href: `${favicon32}`,
+              },
+              { rel: 'shortcut icon', type: 'image/png', href: `${favicon64}` },
+            ]}
           />
         );
       }}
