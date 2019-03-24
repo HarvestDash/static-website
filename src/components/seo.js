@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import favicon16 from '../images/favicon/favicon-16x16.png';
 import favicon32 from '../images/favicon/favicon-32x32.png';
-import favicon64 from '../images/favicon/favicon-96x96.png';
+import favicon64 from '../images/favicon/favicon-64x64.png';
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
