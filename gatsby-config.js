@@ -11,7 +11,6 @@ module.exports = {
       messenger: `https://m.me/OfficialFarmGoat`,
     },
   },
-  pathPrefix: `/static-website`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
