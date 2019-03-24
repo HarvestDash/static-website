@@ -9,6 +9,7 @@ import 'typeface-inter';
 import Theme from './theme';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Seo from '../components/seo';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,6 +30,7 @@ const Layout = ({ children }) => (
 
       return (
         <Grommet theme={Theme}>
+          <Seo title={title} />
           <Header siteTitle={title} />
           {children}
           <Footer siteTitle={title} facebook={social.facebook} />
