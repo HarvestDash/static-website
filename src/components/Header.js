@@ -9,24 +9,30 @@ import NavItems from './NavItems';
 import FarmGoatLogo from '../images/logo/farmgoat-logo-flat.svg';
 
 const FixedHeader = styled.header`
-  ${props =>
-    props.pin && !props.mobile
-      ? `
-        position: fixed;
-        background-color: white;
-        border-bottom: 1px solid lightgray;
-        padding: 0.75em 1em;  
-        `
-      : `
-        position: absolute;
-        background-color: transparent;
-        border-bottom: none;
-        padding: 1em;
-  `}
-  top: 0;
+  position: fixed;
   right: 0;
   left: 0;
-  transition: all 0.3s ease;
+  padding: ${props => (props.isMobile ? '0.5em' : '1em')};
+  transition: all 0.6s ease;
+
+  ${props =>
+    props.pin
+      ? `
+      background-color: white;
+      border-bottom: 1px solid lightgray;
+      top: 0;
+    `
+      : `
+      top: -100px;
+    `}
+
+  ${props =>
+    props.top &&
+    `
+      background-color: transparent;
+      border-bottom: none;
+      top: 0;
+    `}
 `;
 
 const ImgLogo = styled.img`
@@ -71,7 +77,9 @@ class Header extends React.Component {
     super(props);
     this.state = {
       isPin: false,
+      isOnTop: true,
     };
+    this.lastScrollPosition = 0;
 
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -85,22 +93,33 @@ class Header extends React.Component {
   }
 
   handleScroll() {
-    if (window.scrollY > 0) {
+    const currentScrollPosition = window.pageYOffset;
+
+    if (currentScrollPosition === 0) {
+      this.setState({ isOnTop: true });
+    } else {
+      this.setState({ isOnTop: false });
+    }
+
+    // if user scroll up pin the header
+    if (this.lastScrollPosition > currentScrollPosition) {
       this.setState({ isPin: true });
     } else {
       this.setState({ isPin: false });
     }
+
+    this.lastScrollPosition = currentScrollPosition;
   }
 
   render() {
     const { siteTitle } = this.props;
-    const { isPin } = this.state;
+    const { isPin, isOnTop } = this.state;
 
     return (
       <ResponsiveContext.Consumer>
         {size => (
           <React.Fragment>
-            <FixedHeader pin={isPin} mobile={size === 'small'}>
+            <FixedHeader pin={isPin} top={isOnTop} isMobile={size === 'small'}>
               <Container
                 direction="row"
                 justify="between"
