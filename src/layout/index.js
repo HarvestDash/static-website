@@ -18,6 +18,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            description
             social {
               facebook
             }
@@ -26,11 +27,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => {
-      const { title, social } = data.site.siteMetadata;
+      const { title, social, description } = data.site.siteMetadata;
 
       return (
         <Grommet theme={Theme}>
-          <Seo title={title} />
+          <Seo title={title} description={description} />
           <Header siteTitle={title} />
           {children}
           <Footer siteTitle={title} facebook={social.facebook} />
