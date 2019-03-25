@@ -21,19 +21,10 @@ const LandingPage = ({ data }) => {
   return (
     <React.Fragment>
       <Layout>
-        <Section background="lightgray" pad={{ top: 'xlarge' }}>
-          <Section
-            pad={{ top: 'xlarge', bottom: 'large', horizontal: 'large' }}
-          >
-            <Hero
-              title="Seeding the Future!"
-              slogan="Connecting urban farmers and local businesses."
-            />
-          </Section>
-          <Box width="full" margin={{ bottom: '-1px' }}>
-            <HeroSeparator color="#fff" />
-          </Box>
-        </Section>
+        <Hero
+          title="Seeding the Future!"
+          slogan="Connecting urban farmers and local businesses."
+        />
         <Section id="about" background="white">
           <ForWhom />
         </Section>
