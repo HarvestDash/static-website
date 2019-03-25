@@ -14,7 +14,8 @@ const FixedHeader = styled.header`
   left: 0;
   padding: ${props => (props.isMobile ? '0.5em' : '1em')};
   transition: all 0.6s ease;
-  z-index: 1;
+  z-index: 99;
+
   ${props =>
     props.pin
       ? `
@@ -69,7 +70,7 @@ const BottomNav = styled.div`
   right: 0;
   background-color: #fff;
   border-top: 1px solid lightgray;
-  z-index: 1;
+  z-index: 99;
 `;
 
 class Header extends React.Component {
