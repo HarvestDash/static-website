@@ -29,6 +29,7 @@ const FixedHeader = styled.header`
   ${props =>
     props.top &&
     `
+      color: #fff;
       background-color: transparent;
       border-bottom: none;
       top: 0;
