@@ -10,7 +10,6 @@ import Features from '../components/Features';
 import JoinUs from '../components/JoinUs';
 import Contact from '../components/Contact';
 import {
-  HeroSeparator,
   TopSeparator,
   BottomSeparator,
 } from '../components/separator';

@@ -7,8 +7,36 @@ import Section from '../shared-components/Section';
 import Container from '../shared-components/Container';
 import { HeroSeparator } from './separator';
 
+import HeroImage from '../images/index/agri2.jpg';
+
 const HeroWrapper = styled(Box)`
   position: relative;
+  background-color: #8f8f8f;
+  background-image: url(${HeroImage});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  & :before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #24292e;
+    opacity: 0.35;
+  }
+
+  & > * {
+    position: relative;
+
+    & h1,
+    h2,
+    a {
+      color: #fff;
+    }
+  }
 `;
 
 const Hero = ({ title, slogan }) => (
