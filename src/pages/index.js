@@ -13,7 +13,6 @@ import {
   HeroSeparator,
   TopSeparator,
   BottomSeparator,
-  FooterSeparator,
 } from '../components/separator';
 
 const LandingPage = ({ data }) => {
@@ -62,9 +61,6 @@ const LandingPage = ({ data }) => {
         >
           <Contact email={email} facebook={social.messenger} />
         </Section>
-        <Box width="full" margin={{ bottom: '-1px' }}>
-          <FooterSeparator color="lightgray" />
-        </Box>
       </Layout>
     </React.Fragment>
   );
