@@ -14,7 +14,7 @@ const FixedHeader = styled.header`
   left: 0;
   padding: ${props => (props.isMobile ? '0.5em' : '1em')};
   transition: all 0.6s ease;
-
+  z-index: 1;
   ${props =>
     props.pin
       ? `
@@ -25,14 +25,13 @@ const FixedHeader = styled.header`
       : `
       top: -100px;
     `}
-
   ${props =>
     props.top &&
     `
       background-color: transparent;
       border-bottom: none;
       top: 0;
-    `}
+    `};
 `;
 
 const ImgLogo = styled.img`
@@ -70,6 +69,7 @@ const BottomNav = styled.div`
   right: 0;
   background-color: #fff;
   border-top: 1px solid lightgray;
+  z-index: 1;
 `;
 
 class Header extends React.Component {
