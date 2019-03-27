@@ -8,7 +8,7 @@ const BottomSeparator = ({ color }) => (
     viewBox="0 0 1440 160"
     fill={color}
   >
-    <polygon points="0,160 0,0 1440,0 " />
+    <polygon points="1440,0 1440,160 0,160 " />
   </StyledSvg>
 );
 
