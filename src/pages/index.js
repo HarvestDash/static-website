@@ -43,25 +43,24 @@ const LandingPage = ({ data }) => {
         <Section id="about" background="white">
           <ForWhom />
         </Section>
-        <Box width="full" margin={{ bottom: '-1px' }}>
-          <TopSeparator color={accent1} />
-        </Box>
-        <Section
-          background="accent-1"
-          pad={{ vertical: 'xlarge', horizontal: 'large' }}
-        >
-          <Features />
+        <Section background="accent-1" pad="none">
+          <Box width="full" margin={{ top: '-1px' }}>
+            <TopSeparator color="white" />
+          </Box>
+          <Section pad={{ vertical: 'xlarge', horizontal: 'large' }}>
+            <Features />
+          </Section>
         </Section>
-        <Section
-          id="join"
-          background="accent-2"
-          pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}
-        >
-          <JoinUs />
+        <Section id="join" background="accent-2" pad="none">
+          <Section
+            pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}
+          >
+            <JoinUs />
+          </Section>
+          <Box width="full" margin={{ bottom: '-1px' }}>
+            <BottomSeparator color="white" />
+          </Box>
         </Section>
-        <Box width="full" margin={{ top: '-1px' }}>
-          <BottomSeparator color={accent2} />
-        </Box>
         <Section
           id="contact"
           pad={{ top: 'large', bottom: 'xlarge', horizontal: 'large' }}
