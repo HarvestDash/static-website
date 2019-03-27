@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Text, Image } from 'grommet';
+import { Box, Text } from 'grommet';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -10,9 +10,8 @@ const FeatureBox = ({ children }) => (
   <Box
     align="center"
     justify="center"
-    margin={{ vertical: 'medium' }}
+    margin={{ vertical: 'medium', horizontal: 'small' }}
     pad="0.8em"
-    margin="xsmall"
     background="white"
     elevation="large"
     round="xsmall"
