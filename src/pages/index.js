@@ -15,13 +15,8 @@ import {
   BottomSeparator,
   FooterSeparator,
 } from '../components/separator';
-import theme from '../layout/theme';
 
 const LandingPage = ({ data }) => {
-  const { colors } = theme.global;
-  const accent1 = colors['accent-1'];
-  const accent2 = colors['accent-2'];
-
   const { email, social } = data.site.siteMetadata;
 
   return (
