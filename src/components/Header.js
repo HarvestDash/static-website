@@ -14,7 +14,8 @@ const FixedHeader = styled.header`
   left: 0;
   padding: ${props => (props.isMobile ? '0.5em' : '1em')};
   transition: all 0.6s ease;
-  z-index: 1;
+  z-index: 99;
+
   ${props =>
     props.pin
       ? `
@@ -28,6 +29,7 @@ const FixedHeader = styled.header`
   ${props =>
     props.top &&
     `
+      color: #fff;
       background-color: transparent;
       border-bottom: none;
       top: 0;
@@ -35,8 +37,9 @@ const FixedHeader = styled.header`
 `;
 
 const ImgLogo = styled.img`
-  width: 40px;
-  height: 40px;
+  width: ${props => (props.isMobile || !props.top ? '40px' : '45px')};
+  height: ${props => (props.isMobile || !props.top ? '40px' : '45px')};
+  transition: all 0.3s ease;
 `;
 
 const LogoLink = styled(Link)`
@@ -69,7 +72,7 @@ const BottomNav = styled.div`
   right: 0;
   background-color: #fff;
   border-top: 1px solid lightgray;
-  z-index: 1;
+  z-index: 99;
 `;
 
 class Header extends React.Component {
@@ -127,7 +130,12 @@ class Header extends React.Component {
                 margin={{ horizontal: 'auto' }}
               >
                 <LogoLink to="/">
-                  <ImgLogo src={FarmGoatLogo} alt={siteTitle} />
+                  <ImgLogo
+                    src={FarmGoatLogo}
+                    alt={siteTitle}
+                    top={isOnTop}
+                    isMobile={size === 'small'}
+                  />
                   <Text
                     color="brand"
                     size="large"

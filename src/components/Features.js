@@ -38,16 +38,16 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        imageOne: file(relativePath: { eq: "agri1.jpg" }) {
+        imageOne: file(relativePath: { eq: "index/agri1.jpg" }) {
           ...fluidImage
         }
-        imageTwo: file(relativePath: { eq: "agri2.jpg" }) {
+        imageTwo: file(relativePath: { eq: "index/agri2.jpg" }) {
           ...fluidImage
         }
-        imageThree: file(relativePath: { eq: "agri3.jpg" }) {
+        imageThree: file(relativePath: { eq: "index/agri3.jpg" }) {
           ...fluidImage
         }
-        imageFour: file(relativePath: { eq: "agri4.jpg" }) {
+        imageFour: file(relativePath: { eq: "index/agri4.jpg" }) {
           ...fluidImage
         }
       }
