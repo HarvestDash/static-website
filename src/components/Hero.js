@@ -7,7 +7,7 @@ import Section from '../shared-components/Section';
 import Container from '../shared-components/Container';
 import { HeroSeparator } from './separator';
 
-import HeroImage from '../images/index/hero-bg-img.jpg';
+import HeroImage from '../images/index/hero-img.jpg';
 
 const HeroWrapper = styled(Box)`
   position: relative;
@@ -15,7 +15,7 @@ const HeroWrapper = styled(Box)`
   background-image: url(${HeroImage});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-position: center;
 
   & :before {
     position: absolute;
@@ -41,7 +41,7 @@ const HeroWrapper = styled(Box)`
 
 const Hero = ({ title, slogan }) => (
   <HeroWrapper pad={{ top: 'xlarge' }}>
-    <Section pad={{ top: 'xlarge', bottom: 'large', horizontal: 'large' }}>
+    <Section pad={{ top: 'xlarge', bottom: 'xlarge', horizontal: 'large' }}>
       <Container>
         <Heading level="1" margin="none">
           {title}
