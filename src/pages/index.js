@@ -9,10 +9,7 @@ import ForWhom from '../components/ForWhom';
 import Features from '../components/Features';
 import JoinUs from '../components/JoinUs';
 import Contact from '../components/Contact';
-import {
-  TopSeparator,
-  BottomSeparator,
-} from '../components/separator';
+import { TopSeparator, BottomSeparator } from '../components/separator';
 
 const LandingPage = ({ data }) => {
   const { email, social } = data.site.siteMetadata;
