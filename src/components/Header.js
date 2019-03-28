@@ -37,8 +37,9 @@ const FixedHeader = styled.header`
 `;
 
 const ImgLogo = styled.img`
-  width: 40px;
-  height: 40px;
+  width: ${props => (props.isMobile || !props.top ? '40px' : '45px')};
+  height: ${props => (props.isMobile || !props.top ? '40px' : '45px')};
+  transition: all 0.3s ease;
 `;
 
 const LogoLink = styled(Link)`
@@ -129,7 +130,12 @@ class Header extends React.Component {
                 margin={{ horizontal: 'auto' }}
               >
                 <LogoLink to="/">
-                  <ImgLogo src={FarmGoatLogo} alt={siteTitle} />
+                  <ImgLogo
+                    src={FarmGoatLogo}
+                    alt={siteTitle}
+                    top={isOnTop}
+                    isMobile={size === 'small'}
+                  />
                   <Text
                     color="brand"
                     size="large"
