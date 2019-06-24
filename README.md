@@ -1,21 +1,21 @@
 <p align="center">
-    <img alt="FarmGoat logo" src="_assets/FarmGoat_Logo.svg" width="80" />
+    <img alt="HarvestDash logo" src="_assets/FarmGoat_Logo.svg" width="80" />
 </p>
 <h1 align="center">
-  FarmGoat Website
+  HarvestDash Website
 </h1>
 <h3 align="center">
- Seeding the Future!
+  Secure Tomorrow&apos;s Harvest Today
 </h3>
 
-FarmGoat's static website powered by [Gatsby](https://www.gatsbyjs.org/) and using [Grommet](https://v2.grommet.io/) and [styled-components](https://www.styled-components.com/) for design.
+HarvestDash&apos;s static website powered by [Gatsby](https://www.gatsbyjs.org/) and using [Grommet](https://v2.grommet.io/) and [styled-components](https://www.styled-components.com/) for design.
 
 ## 🚀 Quick start
 
 1.  **Clone this repo**
 
     ```sh
-    git clone https://github.com/FarmGoat/static-website/
+    git clone https://github.com/HarvestDash/static-website/
     ```
 
 1.  **Install dependencies**
