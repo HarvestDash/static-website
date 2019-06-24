@@ -1,7 +1,7 @@
 {
   "name": "static-website",
   "private": true,
-  "description": "FarmGoat's website",
+  "description": "HarvestDash Official Website",
   "version": "0.1.0",
   "license": "LGPL-3.0",
   "scripts": {
@@ -61,9 +61,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/FarmGoat/static-website/"
+    "url": "https://github.com/HarvestDash/static-website/"
   },
   "bugs": {
-    "url": "https://github.com/FarmGoat/static-website/issues"
+    "url": "https://github.com/HarvestDash/static-website/issues"
   }
 }
