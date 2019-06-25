@@ -60,7 +60,7 @@ export default () => (
           size="large"
           margin={{ bottom: 'small' }}
         >
-          Farmgoat enables transparent selling and buying of agricultural
+          HarvestDash enables transparent selling and buying of agricultural
           products.
         </Text>
         <Text

@@ -18,7 +18,7 @@ const LandingPage = ({ data }) => {
     <React.Fragment>
       <Layout>
         <Hero
-          title="Seeding the Future!"
+          title="Secure Tomorrow's Harvest Today!"
           slogan="Connecting urban farmers and local businesses."
         />
         <Section id="about" background="white">
