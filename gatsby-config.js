@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: `HarvestDash`,
-    description: `Seeding the Future!`,
+    description: `Secure Tomorrow's Harvest Today!`,
     author: `@HarvestDash`,
     email: `admin@harvestdash.com`,
     social: {
