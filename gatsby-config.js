@@ -2,13 +2,13 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `FarmGoat`,
+    title: `HarvestDash`,
     description: `Seeding the Future!`,
-    author: `@farmgoat`,
-    email: `rem@remlampa.com`,
+    author: `@HarvestDash`,
+    email: `admin@harvestdash.com`,
     social: {
-      facebook: `https://facebook.com/OfficialFarmGoat/`,
-      messenger: `https://m.me/OfficialFarmGoat`,
+      facebook: `https://web.facebook.com/HarvestDashHQ/`,
+      messenger: `https://m.me/HarvestDashHQ`,
     },
   },
   plugins: [
