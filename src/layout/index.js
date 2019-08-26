@@ -15,11 +15,13 @@ const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <SEO />
     <Global
-      styles={currentTheme => ({
+      styles={({ fonts, fontWeights, lineHeights, colors }) => ({
         body: {
-          fontFamily: currentTheme.fonts.body,
-          fontWeight: currentTheme.fontWeights.body,
-          lineHeight: currentTheme.lineHeights.body,
+          fontFamily: fonts.body,
+          fontWeight: fontWeights.body,
+          lineHeight: lineHeights.body,
+          color: colors.text,
+          backgroundColor: colors.background,
         },
       })}
     />

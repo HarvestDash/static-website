@@ -2,10 +2,10 @@ const systemFonts = `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxyg
 
 const theme = {
   colors: {
-    text: '#000',
-    background: '#fff',
-    primary: '#07c',
-    secondary: '#30c',
+    text: '#fff',
+    background: '#004d40',
+    primary: '#2aae56',
+    secondary: '#3b7e65',
     muted: '#f6f6f9',
     gray: '#dddddf',
     highlight: 'hsla(205, 100%, 40%, 0.125)',
