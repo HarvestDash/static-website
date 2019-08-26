@@ -13,6 +13,9 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.16",
+    "@emotion/styled": "^10.0.15",
+    "emotion-theming": "^10.0.14",
     "gatsby": "^2.13.83",
     "gatsby-image": "^2.2.14",
     "gatsby-plugin-manifest": "^2.2.9",
@@ -26,6 +29,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
+    "rebass": "^4.0.5",
     "typeface-inter": "^0.0.77"
   },
   "devDependencies": {
