@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
     />
     <Flex height="100vh" flexDirection="column" variant="container">
       <Header />
-      <Box as="main" px={3} py={2} flex={1}>
+      <Box as="main" px={4} py={3} flex={1}>
         {children}
       </Box>
     </Flex>

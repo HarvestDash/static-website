@@ -88,16 +88,16 @@ const theme = {
   buttons: {
     primary: {
       fontSize: 2,
-      fontWeight: 'bold',
-      color: 'background',
+      fontWeight: '600',
+      color: 'text',
       bg: 'primary',
       borderRadius: 'default',
     },
     outline: {
       variant: 'buttons.primary',
-      color: 'primary',
+      color: 'text',
       bg: 'transparent',
-      boxShadow: 'inset 0 0 2px',
+      boxShadow: 'inset 0 0 0 1px',
     },
     secondary: {
       variant: 'buttons.primary',
