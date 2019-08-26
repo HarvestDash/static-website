@@ -9,6 +9,7 @@ import 'typeface-quicksand';
 
 import theme from './theme';
 import SEO from '../components/SEO';
+import Header from '../components/Header';
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -22,6 +23,7 @@ const Layout = ({ children }) => (
         },
       })}
     />
+    <Header />
     {children}
   </ThemeProvider>
 );

@@ -56,6 +56,9 @@ const theme = {
     },
   },
   variants: {
+    container: {
+      maxWidth: '1080px',
+    },
     avatar: {
       width: 'avatar',
       height: 'avatar',
