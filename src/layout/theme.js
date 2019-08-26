@@ -59,8 +59,6 @@ const theme = {
     container: {
       maxWidth: '1080px',
       mx: 'auto',
-      px: 4,
-      py: 3,
     },
     avatar: {
       width: 'avatar',

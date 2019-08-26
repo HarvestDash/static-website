@@ -16,7 +16,7 @@ const Header = () => {
   const { title } = data.site.siteMetadata;
 
   return (
-    <Box as="header" variant="container">
+    <Box as="header" px={4} py={3}>
       <Text fontFamily="brand" fontWeight="bold" fontSize={4}>
         {title}
       </Text>
