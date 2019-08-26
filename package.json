@@ -32,7 +32,8 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "rebass": "^4.0.5",
-    "typeface-inter": "^0.0.77"
+    "typeface-inter": "^0.0.77",
+    "typeface-quicksand": "^0.0.71"
   },
   "devDependencies": {
     "eslint": "6.1.0",

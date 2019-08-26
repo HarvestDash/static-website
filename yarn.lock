@@ -11964,6 +11964,11 @@ typeface-inter@^0.0.77:
   resolved "https://registry.yarnpkg.com/typeface-inter/-/typeface-inter-0.0.77.tgz#920b81f9bd78a988e69f5e5cc3109517fe7f7749"
   integrity sha512-U7fcdPsk07v5xIYTbiOF4kpioApUZkIuyW28sxJiez5FKCnN7uaWRyQOaOmZcZvb50VZdw2LBBbshO/aNlxcXA==
 
+typeface-quicksand@^0.0.71:
+  version "0.0.71"
+  resolved "https://registry.yarnpkg.com/typeface-quicksand/-/typeface-quicksand-0.0.71.tgz#85157b7cc299b558dbeeea1a413217887685dd6b"
+  integrity sha512-MIVkJ+oQGx/YTjMn6rff+BVr/xDBctkgYCa85ch8vTpeqtoGF/ZoYHWOKJRBoeiYVsHGasVczb4NPe5gZQsjiQ==
+
 ua-parser-js@^0.7.18:
   version "0.7.20"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.20.tgz#7527178b82f6a62a0f243d1f94fd30e3e3c21098"

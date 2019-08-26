@@ -5,6 +5,7 @@ import { ThemeProvider } from 'emotion-theming';
 
 import 'normalize.css';
 import 'typeface-inter';
+import 'typeface-quicksand';
 
 import theme from './theme';
 import SEO from '../components/SEO';

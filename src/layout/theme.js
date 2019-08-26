@@ -11,6 +11,7 @@ const theme = {
     highlight: 'hsla(205, 100%, 40%, 0.125)',
   },
   fonts: {
+    brand: `Quicksand, ${systemFonts}`,
     body: `'Inter', ${systemFonts}`,
     heading: 'inherit',
     monospace: 'Menlo, monospace',
