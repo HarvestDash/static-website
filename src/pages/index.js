@@ -1,9 +1,10 @@
 import React from 'react';
+import Layout from '../layout';
 
 const LandingPage = () => (
-  <div>
+  <Layout>
     <h1>Hello World</h1>
-  </div>
+  </Layout>
 );
 
 export default LandingPage;
