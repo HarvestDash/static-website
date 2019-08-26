@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
+import { Box } from 'rebass';
 
 import 'normalize.css';
 import 'typeface-inter';
@@ -26,7 +27,9 @@ const Layout = ({ children }) => (
       })}
     />
     <Header />
-    {children}
+    <Box as="main" variant="container">
+      {children}
+    </Box>
   </ThemeProvider>
 );
 
