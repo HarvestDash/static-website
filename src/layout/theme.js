@@ -1,3 +1,5 @@
+const systemFonts = `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif`;
+
 const theme = {
   colors: {
     text: '#000',
@@ -9,14 +11,18 @@ const theme = {
     highlight: 'hsla(205, 100%, 40%, 0.125)',
   },
   fonts: {
+    body: `'Inter', ${systemFonts}`,
     heading: 'inherit',
+    monospace: 'Menlo, monospace',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
+    body: 400,
     heading: 700,
     bold: 700,
   },
   lineHeights: {
+    body: 1.5,
     heading: 1.25,
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -92,13 +98,6 @@ const theme = {
       variant: 'buttons.primary',
       color: 'background',
       bg: 'secondary',
-    },
-  },
-  styles: {
-    root: {
-      fontFamily: 'body',
-      fontWeight: 'body',
-      lineHeight: 'body',
     },
   },
 };
