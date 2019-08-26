@@ -12,8 +12,9 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-react-axe',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-axe',
+    'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
