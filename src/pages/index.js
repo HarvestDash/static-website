@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Flex, Heading } from 'rebass';
+import { Button, Flex, Heading, Text } from 'rebass';
 import Layout from '../layout';
+import ArrowRight from '../images/arrow-right.svg';
 
 const LandingPage = () => (
   <Layout>
@@ -31,7 +32,10 @@ const LandingPage = () => (
           mb={[2, 0]}
           px={[4, 3]}
         >
-          Sell Harvest &#8594;
+          <Flex alignItems="center">
+            <Text mr={2}>Sell Harvest</Text>
+            <ArrowRight />
+          </Flex>
         </Button>
 
         <Button
@@ -41,7 +45,10 @@ const LandingPage = () => (
           mt={[2, 0]}
           px={[4, 3]}
         >
-          Buy Harvest &#8594;
+          <Flex alignItems="center">
+            <Text mr={2}>Buy Harvest</Text>
+            <ArrowRight />
+          </Flex>
         </Button>
       </Flex>
     </Flex>
