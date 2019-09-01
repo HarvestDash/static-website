@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Box, Flex, Text } from 'rebass';
+import { Box, Flex, Image, Text } from 'rebass';
 import logo from '../images/HarvestDash-Logo-White.svg';
 
 const Header = () => {
@@ -27,8 +27,7 @@ const Header = () => {
       }}
     >
       <Flex px={4} py={3} alignItems="center" variant="container">
-        <Box
-          as="img"
+        <Image
           src={logo}
           alt="HarvestDash logo"
           mr={3}
