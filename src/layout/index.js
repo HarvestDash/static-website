@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
-import { Box, Flex } from 'rebass';
+import { Box } from 'rebass';
 
 import 'normalize.css';
 import 'typeface-inter';
@@ -26,12 +26,11 @@ const Layout = ({ children }) => (
         },
       })}
     />
-    <Flex height="100vh" flexDirection="column" variant="container">
-      <Header />
-      <Box as="main" px={4} py={3} flex={1}>
-        {children}
-      </Box>
-    </Flex>
+
+    <Header />
+    <Box as="main" px={4} py={3} height="100vh" variant="container">
+      {children}
+    </Box>
   </ThemeProvider>
 );
 
