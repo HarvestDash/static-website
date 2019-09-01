@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Box, Flex, Image, Text } from 'rebass';
-import logo from '../images/HarvestDash-Logo-White.svg';
-import fbLogo from '../images/facebook.svg';
+import { Box, Flex, Text } from 'rebass';
+import Logo from '../images/HarvestDash-Logo-White.svg';
+import FbLogo from '../images/facebook.svg';
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -30,13 +30,9 @@ const Footer = () => {
         flexDirection={['column', 'row']}
       >
         <Flex alignItems="center">
-          <Image
-            src={logo}
-            alt="HarvestDash logo"
-            mr={3}
-            width={['40px', '50px']}
-            height="auto"
-          />
+          <Box mr={3} width={['40px', '50px']} height="auto">
+            <Logo css={{ width: '100%', height: 'auto' }} />
+          </Box>
           <Text fontFamily="brand" fontWeight="bold" fontSize={[3, 4]}>
             {title}
           </Text>
@@ -57,7 +53,7 @@ const Footer = () => {
               borderRadius: '50%',
             }}
           >
-            <Image src={fbLogo} alt="Facebook logo" />
+            <FbLogo />
           </Flex>
           <Text>&copy; 2019 {title}</Text>
         </Flex>
