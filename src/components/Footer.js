@@ -10,12 +10,15 @@ const Footer = () => {
       site {
         siteMetadata {
           title
+          social {
+            facebook
+          }
         }
       }
     }
   `);
 
-  const { title } = data.site.siteMetadata;
+  const { title, social } = data.site.siteMetadata;
 
   return (
     <Box as="footer" bg="secondary">
@@ -45,6 +48,8 @@ const Footer = () => {
           mt={[4, 0]}
         >
           <Flex
+            as="a"
+            href={social.facebook}
             p={2}
             mb={4}
             sx={{
