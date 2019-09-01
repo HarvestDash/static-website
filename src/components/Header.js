@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Box, Flex, Image, Text } from 'rebass';
-import logo from '../images/HarvestDash-Logo-White.svg';
+import { Box, Flex, Text } from 'rebass';
+import Logo from '../images/HarvestDash-Logo-White.svg';
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -27,13 +27,9 @@ const Header = () => {
       }}
     >
       <Flex px={4} py={3} alignItems="center" variant="container">
-        <Image
-          src={logo}
-          alt="HarvestDash logo"
-          mr={3}
-          width={['40px', '50px']}
-          height="auto"
-        />
+        <Box mr={3} width={['40px', '50px']} height="auto">
+          <Logo css={{ width: '100%', height: 'auto' }} />
+        </Box>
         <Text fontFamily="brand" fontWeight="bold" fontSize={[3, 4]}>
           {title}
         </Text>
