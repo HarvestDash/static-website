@@ -52,6 +52,7 @@ const Footer = () => {
               backgroundColor: 'rgba(0, 77, 64, 0.5)',
               borderRadius: '50%',
             }}
+            aria-label="facebook"
           >
             <FbLogo />
           </Flex>
