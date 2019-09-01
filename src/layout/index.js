@@ -11,6 +11,7 @@ import 'typeface-quicksand';
 import theme from './theme';
 import SEO from '../components/SEO';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -31,6 +32,7 @@ const Layout = ({ children }) => (
     <Box as="main" px={4} py={3} height="100vh" variant="container">
       {children}
     </Box>
+    <Footer />
   </ThemeProvider>
 );
 
