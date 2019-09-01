@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="HarvestDash logo" src="_assets/FarmGoat_Logo.svg" width="80" />
+    <img alt="HarvestDash logo" src="_assets/HarvestDash-Logo-Stacked.png" width="200px" />
 </p>
 <h1 align="center">
   HarvestDash Website
