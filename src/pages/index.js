@@ -1,5 +1,6 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { Box, Button, Flex, Heading, Link, Text } from 'rebass';
 import Layout from '../layout';
@@ -8,20 +9,8 @@ import ArrowRight from '../images/arrow-right.svg';
 const SELL_SIGNUP_URL = 'https://form.responster.com/ukgxQr';
 const BUY_SIGNUP_URL = 'https://form.responster.com/IQy9YS';
 
-const LandingPage = () => {
-  const image = useStaticQuery(
-    graphql`
-      {
-        file(relativePath: { eq: "farmer.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
-      }
-    `
-  );
+const LandingPage = ({ data }) => {
+  const { site, file } = data;
 
   return (
     <Layout>
@@ -33,7 +22,7 @@ const LandingPage = () => {
             fontFamily="brand"
             textAlign={['center', 'left']}
           >
-            HarvestDash
+            {site.siteMetadata.title}
           </Heading>
           <Heading
             as="h2"
@@ -88,11 +77,33 @@ const LandingPage = () => {
           </Flex>
         </Box>
         <Box sx={{ display: ['none', 'block'] }} width={['100%', '40%']}>
-          <Img fluid={image.file.childImageSharp.fluid} alt="farmer" />
+          <Img fluid={file.childImageSharp.fluid} alt="farmer" />
         </Box>
       </Flex>
     </Layout>
   );
 };
+
+LandingPage.propTypes = {
+  data: PropTypes.instanceOf(Object).isRequired,
+};
+
+export const query = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+
+    file(relativePath: { eq: "farmer.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`;
 
 export default LandingPage;
