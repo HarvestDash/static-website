@@ -92,6 +92,10 @@ const theme = {
       color: 'text',
       bg: 'primary',
       borderRadius: 'default',
+      transition: 'all 250ms cubic-bezier(0.4,0,0.2,1)',
+      ':hover, :focus, :active': {
+        boxShadow: '0 0 0 0.2rem rgba(42, 174, 86, 0.3)',
+      },
     },
     outline: {
       variant: 'buttons.primary',
