@@ -1,9 +1,12 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { Box, Button, Flex, Heading, Text } from 'rebass';
+import { Box, Button, Flex, Heading, Link, Text } from 'rebass';
 import Layout from '../layout';
 import ArrowRight from '../images/arrow-right.svg';
+
+const SELL_SIGNUP_URL = 'https://form.responster.com/ukgxQr';
+const BUY_SIGNUP_URL = 'https://form.responster.com/IQy9YS';
 
 const LandingPage = () => {
   const image = useStaticQuery(
@@ -50,10 +53,17 @@ const LandingPage = () => {
               mb={[2, 0]}
               px={[4, 3]}
             >
-              <Flex alignItems="center">
+              <Link
+                href={SELL_SIGNUP_URL}
+                sx={{
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
                 <Text mr={2}>Sell Harvest</Text>
                 <ArrowRight />
-              </Flex>
+              </Link>
             </Button>
 
             <Button
@@ -63,10 +73,17 @@ const LandingPage = () => {
               mt={[2, 0]}
               px={[4, 3]}
             >
-              <Flex alignItems="center">
+              <Link
+                href={BUY_SIGNUP_URL}
+                sx={{
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
                 <Text mr={2}>Buy Harvest</Text>
                 <ArrowRight />
-              </Flex>
+              </Link>
             </Button>
           </Flex>
         </Box>
