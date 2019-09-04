@@ -71,7 +71,7 @@ const theme = {
       boxShadow: 'card',
     },
     link: {
-      color: 'primary',
+      color: 'inherit',
     },
     nav: {
       fontSize: 1,

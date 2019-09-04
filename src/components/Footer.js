@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Box, Flex, Text } from 'rebass';
+import { Box, Flex, Link, Text } from 'rebass';
 import Logo from '../images/HarvestDash-Logo-White.svg';
 import FbLogo from '../images/facebook.svg';
 
@@ -43,19 +43,25 @@ const Footer = () => {
           alignItems={['flex-start', 'flex-end']}
           mt={[4, 0]}
         >
-          <Flex
-            as="a"
+          <Link
             href={social.facebook}
             p={2}
             mb={4}
             sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
               backgroundColor: 'rgba(0, 77, 64, 0.5)',
               borderRadius: '50%',
+              transition: 'all 250ms cubic-bezier(0.4,0,0.2,1)',
+              ':hover': {
+                color: 'secondary',
+              },
             }}
             aria-label="facebook"
           >
             <FbLogo />
-          </Flex>
+          </Link>
           <Text>&copy; 2019 {title}</Text>
         </Flex>
       </Flex>
