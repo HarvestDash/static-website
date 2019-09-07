@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { Box, Button, Flex, Heading, Link, Text } from 'rebass';
 import Layout from '../layout';
+import Logo from '../images/HarvestDash-Logo-White.svg';
 import ArrowRight from '../images/arrow-right.svg';
 
 const SELL_SIGNUP_URL = 'https://form.responster.com/ukgxQr';
@@ -34,6 +35,15 @@ const LandingPage = ({ data }) => {
           variant="container"
         >
           <Box width={['100%', '60%']}>
+            <Box
+              mx="auto"
+              mb={3}
+              width="100px"
+              height="auto"
+              sx={{ display: ['block', 'none'] }}
+            >
+              <Logo css={{ width: '100%', height: 'auto' }} />
+            </Box>
             <Heading
               as="h1"
               fontSize={[5, 6, 7]}
