@@ -29,7 +29,7 @@ const Layout = ({ children }) => (
     />
 
     <Header />
-    <Box as="main" px={4} py={3} height="100vh" variant="container">
+    <Box as="main" height="100vh">
       {children}
     </Box>
     <Footer />
