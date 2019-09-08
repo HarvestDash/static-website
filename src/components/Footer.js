@@ -68,6 +68,15 @@ const Footer = () => {
             &copy; 2019 {title}
           </Text>
           <Text fontSize="8px">
+            Background by{' '}
+            <Link
+              href="https://www.svgbackgrounds.com/"
+              sx={{ textDecoration: 'none' }}
+            >
+              SVGBackgrounds.com
+            </Link>
+          </Text>
+          <Text fontSize="8px">
             Farmer Vector Designed By 588ku from{' '}
             <Link
               href="https://pngtree.com/freepng/cartoon-character-hand-drawn-farmers-farmer-holding-rice-xiaoman_3805007.html"
