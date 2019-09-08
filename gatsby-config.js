@@ -2,36 +2,45 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `HarvestDash`,
-    description: `Secure Tomorrow's Harvest Today!`,
-    author: `@HarvestDash`,
-    email: `admin@harvestdash.com`,
+    title: 'HarvestDash',
+    description: "Secure Tomorrow's Harvest Today!",
+    author: '@HarvestDash',
+    email: 'admin@harvestdash.com',
     social: {
-      facebook: `https://web.facebook.com/HarvestDashHQ/`,
-      messenger: `https://m.me/HarvestDashHQ`,
+      facebook: 'https://web.facebook.com/HarvestDashHQ/',
+      messenger: 'https://m.me/HarvestDashHQ',
     },
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-axe',
+    'gatsby-plugin-emotion',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
+        name: 'images',
+        path: path.join(__dirname, 'src', 'images'),
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-react-svg',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        rule: {
+          include: /.svg$/,
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'HarvestDash',
+        short_name: 'HarvestDash',
+        start_url: '/',
+        background_color: '#004d40',
+        theme_color: '#004d40',
+        display: 'minimal-ui',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

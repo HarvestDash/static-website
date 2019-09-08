@@ -1,44 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-import { Grommet } from 'grommet';
+import { Global } from '@emotion/core';
+import { ThemeProvider } from 'emotion-theming';
+import { Box } from 'rebass';
 
 import 'normalize.css';
 import 'typeface-inter';
+import 'typeface-quicksand';
 
-import Theme from './theme';
+import theme from './theme';
+import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Seo from '../components/seo';
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-            description
-            social {
-              facebook
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      const { title, social, description } = data.site.siteMetadata;
+  <ThemeProvider theme={theme}>
+    <SEO />
+    <Global
+      styles={({ fonts, fontWeights, lineHeights, colors }) => ({
+        body: {
+          fontFamily: fonts.body,
+          fontWeight: fontWeights.body,
+          lineHeight: lineHeights.body,
+          color: colors.text,
+          backgroundColor: colors.background,
+        },
+      })}
+    />
 
-      return (
-        <Grommet theme={Theme}>
-          <Seo title={title} description={description} />
-          <Header siteTitle={title} />
-          {children}
-          <Footer siteTitle={title} facebook={social.facebook} />
-        </Grommet>
-      );
-    }}
-  />
+    <Header />
+    <Box as="main" height="100vh">
+      {children}
+    </Box>
+    <Footer />
+  </ThemeProvider>
 );
 
 Layout.propTypes = {

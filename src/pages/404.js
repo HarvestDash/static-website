@@ -1,13 +1,17 @@
 import React from 'react';
-
-import SEO from '../components/seo';
+import { Flex, Heading, Text } from 'rebass';
 import Layout from '../layout';
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Flex height="100%" flexDirection="column" justifyContent="center">
+      <Heading as="h1" variant="display">
+        NOT FOUND
+      </Heading>
+      <Text fontSize={[1, 2, 3]}>
+        You just hit a route that doesn&#39;t exist... the sadness.
+      </Text>
+    </Flex>
   </Layout>
 );
 

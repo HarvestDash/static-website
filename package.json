@@ -13,50 +13,53 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.0",
-    "@material-ui/icons": "^3.0.2",
-    "apollo-boost": "^0.1.27",
-    "babel-plugin-styled-components": "^1.10.0",
-    "core-js": "^2.6.5",
-    "gatsby": "^2.0.76",
-    "gatsby-background-image": "^0.2.8-alpha3",
-    "gatsby-image": "^2.0.20",
-    "gatsby-plugin-manifest": "^2.0.9",
-    "gatsby-plugin-offline": "^2.0.16",
-    "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sharp": "^2.0.14",
-    "gatsby-plugin-styled-components": "^3.0.7",
-    "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-transformer-sharp": "^2.1.8",
-    "grommet": "^2.4.0",
-    "grommet-icons": "^4.2.0",
-    "jss": "^9.8.7",
+    "@emotion/core": "^10.0.16",
+    "@emotion/styled": "^10.0.15",
+    "emotion-theming": "^10.0.14",
+    "gatsby": "^2.13.83",
+    "gatsby-image": "^2.2.17",
+    "gatsby-plugin-emotion": "^4.1.4",
+    "gatsby-plugin-manifest": "^2.2.9",
+    "gatsby-plugin-offline": "^2.2.10",
+    "gatsby-plugin-react-axe": "^0.2.2",
+    "gatsby-plugin-react-helmet": "^3.1.5",
+    "gatsby-plugin-react-svg": "^2.1.2",
+    "gatsby-plugin-sharp": "^2.2.18",
+    "gatsby-source-filesystem": "^2.1.18",
+    "gatsby-transformer-sharp": "^2.2.12",
+    "lodash.throttle": "^4.1.1",
     "normalize.css": "^8.0.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-apollo": "^2.4.0",
-    "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0",
-    "react-jss": "^8.6.1",
-    "react-scroll": "^1.7.11",
-    "styled-components": "^4.1.3",
-    "styled-jsx": "^3.2.0",
-    "typeface-inter": "^3.2.0"
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "rebass": "^4.0.5",
+    "typeface-inter": "^0.0.77",
+    "typeface-quicksand": "^0.0.71"
   },
   "devDependencies": {
-    "eslint": "^5.12.1",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.6.0",
-    "eslint-plugin-import": "^2.15.0",
-    "eslint-plugin-jsx-a11y": "^6.2.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
-    "husky": "^1.3.1",
-    "prettier": "^1.15.2"
+    "eslint": "6.1.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.4",
+    "prettier": "^1.18.2"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn lint"
+      "pre-commit": "lint-staged"
     }
   },
   "repository": {
