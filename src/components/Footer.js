@@ -41,28 +41,32 @@ const Footer = () => {
           flex={1}
           flexDirection="column"
           alignItems={['flex-start', 'flex-end']}
-          mt={[4, 0]}
+          mt={[4, 2]}
         >
-          <Link
-            href={social.facebook}
-            p={2}
-            mb={4}
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'rgba(0, 77, 64, 0.5)',
-              borderRadius: '50%',
-              transition: 'all 250ms cubic-bezier(0.4,0,0.2,1)',
-              ':hover': {
-                color: 'secondary',
-              },
-            }}
-            aria-label="facebook"
-          >
-            <FbLogo />
-          </Link>
-          <Text mb={3}>&copy; 2019 {title}</Text>
+          <Flex mb={4} alignItems="center">
+            <Text mr={2}>Like us on:</Text>
+            <Link
+              href={social.facebook}
+              p={2}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: 'rgba(0, 77, 64, 0.5)',
+                borderRadius: '50%',
+                transition: 'all 250ms cubic-bezier(0.4,0,0.2,1)',
+                ':hover': {
+                  color: 'secondary',
+                },
+              }}
+              aria-label="facebook"
+            >
+              <FbLogo />
+            </Link>
+          </Flex>
+          <Text fontSize={0} mb={3}>
+            &copy; 2019 {title}
+          </Text>
           <Text fontSize="8px">
             Farmer Vector Designed By 588ku from{' '}
             <Link
