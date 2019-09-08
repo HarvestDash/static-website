@@ -41,6 +41,7 @@ module.exports = {
         background_color: '#004d40',
         theme_color: '#004d40',
         display: 'minimal-ui',
+        icon: 'src/images/HarvestDash-Icon.svg',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
